@@ -1,5 +1,4 @@
 *Historias fantasticas-
-'
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,7 +10,7 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f7f7f7;
+      background-color: #f7f7f7}
     }
     .historia {
       background-color: #fff;
@@ -83,4 +82,3 @@
       </div>
     </section>
   </main>
-```
