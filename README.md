@@ -1,82 +1,71 @@
-# Historias-
+*historias-
+```
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>100 Historias Increíbles</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        p {
-            margin: 10px 20px;
-            line-height: 1.6;
-        }
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        hr {
-            margin: 20px 0;
-        }
-        ul {
-            list-style: none;
-            padding: 0;
-            text-align: center;
-        }
-        li {
-            margin: 5px 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historias</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .historia {
+      background-color: #f7f7f7;
+      border: 1px solid #ddd;
+      margin: 1em;
+      padding: 1em;
+      width: 300px;
+    }
+    .historia h2 {
+      font-size: 1.5em;
+      margin-top: 0;
+      cursor: pointer;
+    }
+    .historia p {
+      font-size: 1em;
+      margin-bottom: 1em;
+      display: none;
+    }
+    .historia.activo p {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-    <header id="inicio">
-        <h1>100 Historias Increíbles</h1>
-        <p>Haz clic en una historia para leerla.</p>
-    </header>
-    <ul>
-        <li><a href="#historia1">Historia 1: El Misterio Perdido</a></li>
-        <li><a href="#historia2">Historia 2: La Aventura Olvidada</a></li>
-        <li><a href="#historia3">Historia 3: El Secreto Oculto</a></li>
-        <li><a href="#historia4">Historia 4: El Encuentro Prohibido</a></li>
-        <li><a href="#historia5">Historia 5: La Leyenda Eterna</a></li>
-        <!-- Continúa agregando las historias hasta llegar a Historia 100 -->
-    </ul>
-    <hr>
-    <section id="historia1">
-        <h2>Historia 1: El Misterio Perdido</h2>
-        <p>Esta es una historia única que narra un evento sorprendente y misterioso número 1. Algo inexplicable ocurrió en un lugar remoto, cambiando la vida de todos los involucrados para siempre.</p>
-        <p><a href="#inicio">Volver al inicio</a></p>
-        <hr>
+  <header>
+    <h1>Historias</h1>
+  </header>
+  <main>
+    <section id="historias">
+      <div class="historia">
+        <h2>La casa de los recuerdos</h2>
+        <p>La casa estaba ubicada en una calle tranquila, rodeada de árboles que parecían susurrar secretos entre sí. La fachada era de piedra gris, con ventanas que parecían mirar hacia el pasado. La puerta principal estaba adornada con una aldaba en forma de león, que parecía rugir en silencio.</p>
+        <p>La casa había pertenecido a la familia de mi abuela durante generaciones. Mi abuela me había contado historias sobre la casa, sobre los recuerdos que se escondían en sus paredes, sobre los secretos que se susurraban en sus habitaciones.</p>
+      </div>
+      <div class="historia">
+        <h2>El misterio del reloj</h2>
+        <p>El reloj estaba colgado en la pared de la habitación de mi abuelo. Era un reloj antiguo, con una cara redonda y manecillas largas que parecían bailar en el aire. Mi abuelo me había contado que el reloj había sido fabricado en el siglo XIX y que había pertenecido a su abuelo.</p>
+        <p>Un día, mientras estaba jugando en la habitación de mi abuelo, noté que el reloj se había detenido. Me pareció extraño, ya que el reloj siempre había funcionado correctamente. Decidí investigar y descubrí que el reloj tenía un mecanismo secreto que permitía que se detuviera en un momento específico del día.</p>
+      </div>
+      <div class="historia">
+        <h2>La leyenda del lago</h2>
+        <p>El lago estaba rodeado de montañas que parecían tocar el cielo. Era un lugar de gran belleza, pero también de gran misterio. La gente del pueblo decía que el lago estaba embrujado, que había un espíritu que se escondía en sus profundidades.</p>
+        <p>Un día, decidí investigar la leyenda del lago. Me sumergí en sus aguas y descubrí que había una cueva debajo del lago. La cueva estaba llena de estalactitas y estalagmitas que parecían bailar en la oscuridad.</p>
+      </div>
     </section>
-    <section id="historia2">
-        <h2>Historia 2: La Aventura Olvidada</h2>
-        <p>Esta es una historia única que narra un evento sorprendente y misterioso número 2. Algo inexplicable ocurrió en un lugar remoto, cambiando la vida de todos los involucrados para siempre.</p>
-        <p><a href="#inicio">Volver al inicio</a></p>
-        <hr>
-    </section>
-    <section id="historia3">
-        <h2>Historia 3: El Secreto Oculto</h2>
-        <p>Esta es una historia única que narra un evento sorprendente y misterioso número 3. Algo inexplicable ocurrió en un lugar remoto, cambiando la vida de todos los involucrados para siempre.</p>
-        <p><a href="#inicio">Volver al inicio</a></p>
-        <hr>
-    </section>
-    <!-- Continúa agregando más secciones para todas las historias -->
+  </main>
+  <script>
+    const historiaTitles = document.querySelectorAll('.historia h2');
+
+    historiaTitles.forEach(title => {
+      title.addEventListener('click', () => {
+        const historia = title.parentNode;
+        historia.classList.toggle('activo');
+      });
+    });
+  </script>
 </body>
 </html>
