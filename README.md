@@ -1,5 +1,5 @@
-*historias-
-```
+Historias fantasticas 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,18 +11,30 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background-color: #f7f7f7;
     }
     .historia {
-      background-color: #f7f7f7;
+      background-color: #fff;
       border: 1px solid #ddd;
       margin: 1em;
       padding: 1em;
       width: 300px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      transition: opacity 0.5s;
+    }
+    .historia.activo {
+      opacity: 1;
+    }
+    .historia.inactivo {
+      opacity: 0;
     }
     .historia h2 {
       font-size: 1.5em;
       margin-top: 0;
       cursor: pointer;
+    }
+    .historia h2:hover {
+      color: #337ab7;
     }
     .historia p {
       font-size: 1em;
@@ -31,6 +43,20 @@
     }
     .historia.activo p {
       display: block;
+    }
+    #volver-arriba {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #337ab7;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #volver-arriba:hover {
+      background-color: #23527c;
     }
   </style>
 </head>
@@ -57,15 +83,3 @@
       </div>
     </section>
   </main>
-  <script>
-    const historiaTitles = document.querySelectorAll('.historia h2');
-
-    historiaTitles.forEach(title => {
-      title.addEventListener('click', () => {
-        const historia = title.parentNode;
-        historia.classList.toggle('activo');
-      });
-    });
-  </script>
-</body>
-</html>
